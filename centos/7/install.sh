@@ -3,13 +3,13 @@
 base_path=`cd "$(dirname "$0")"; pwd`
 
 # nginx
-echo "\
+echo '
 [nginx]
 name=nginx repo
 baseurl=http://nginx.org/packages/mainline/centos/7/$basearch/
 gpgcheck=0
 enabled=1
-" > /etc/yum.repos.d/nginx.repo
+' > /etc/yum.repos.d/nginx.repo
 
 yum -y install nginx
 
@@ -29,13 +29,13 @@ yum -y install gcc-c++ make nodejs
 
 # mongodb 2.6
 # supoort Red Hat Enterprise Linux or CentOS Linux versions 6 and 7
-echo "\
+echo '
 [mongodb-org-2.6]
 name=MongoDB 2.6 Repository
 baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
 gpgcheck=0
 enabled=1
-" > /etc/yum.repos.d/mongodb-2.6.repo
+' > /etc/yum.repos.d/mongodb-2.6.repo
 
 yum -y install mongodb-org
 chkconfig --level 2345 mongod on
