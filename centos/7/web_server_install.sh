@@ -6,7 +6,7 @@ base_path=`cd "$(dirname "$0")"; pwd`
 echo '
 [nginx]
 name=nginx repo
-baseurl=http://nginx.org/packages/mainline/centos/7/$basearch/
+baseurl=http://nginx.org/packages/centos/7/$basearch/
 gpgcheck=0
 enabled=1
 ' > /etc/yum.repos.d/nginx.repo
